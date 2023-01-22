@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Truco.Views.AboutPage"
+             xmlns:vm="clr-namespace:Truco.ViewModels"
+             Title="{Binding Title}">
+            
+    
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <ScrollView Grid.Row="1">
+
+            <StackLayout>
+                <Frame  Padding="1" CornerRadius="0">
+                    <Grid>
+                        <Label Text="Contador para cinco" 
+                   HorizontalTextAlignment="Center"
+                    Padding="20,0,20,0"
+                   TextColor="#4257A5"
+                   FontAttributes="Bold"
+                   FontSize="27"/>
+                    </Grid>
+                </Frame>
+                <StackLayout Orientation="Vertical" Padding="30,0,30,0" >
+
+
+                <Frame Margin="0,20,0,0"
+                       BackgroundColor="AliceBlue">
+                    <StackLayout>
+                        <Frame>
+                    <StackLayout>
+                                    <Label x:Name="yotxt" 
+                                            TextColor="Black"
+                                                                                        HorizontalOptions="Center"
+                                            Text="Yo"
+                                            FontSize="20" />
+                                <Label TextColor="Black" x:Name="ContadorAutomaticoLabel" Text="0" 
+                   HorizontalTextAlignment="Center" FontSize="30" />
+                                    <Label x:Name="contyotxt"
+                            TextColor="Black" Text="victorias: 0"
+                               HorizontalTextAlignment="Start" 
+                               FontSize="17"/>
+                                </StackLayout>
+                </Frame>
+                <StackLayout Orientation="Horizontal">
+                                <Button x:Name="botonR"
+                        Text="Restar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked_1"/>
+                                <Button x:Name="botonS"
+                        Text="Sumar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked"/>
+
+
+                </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+
+
+                <Frame Margin="0,20,0,0"
+                       BackgroundColor="AliceBlue">
+                    <StackLayout>
+                        <Frame>
+                    <StackLayout>
+                                    <Editor x:Name="mamitatxt" 
+                                            TextColor="Black"
+                                                                                        HorizontalOptions="Center"
+                                            Text="Mamita 1"
+                                            FontSize="20" />
+
+                                <Label TextColor="Black" x:Name="ContadorAutomaticoLabel1" Text="0" 
+                   HorizontalTextAlignment="Center" FontSize="30" />
+                                    <Label x:Name="contmamitatxt"
+                            TextColor="Black" Text="victorias: 0"
+                               HorizontalTextAlignment="Start" 
+                               FontSize="17"/>
+                                </StackLayout>
+                </Frame>
+                <StackLayout Orientation="Horizontal">
+                                <Button x:Name="botonR1"
+                        Text="Restar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked_3"/>
+                                <Button x:Name="botonS1"
+                                    Text="Sumar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked_2"/>
+                            </StackLayout>
+                            </StackLayout>
+                        </Frame>
+
+
+
+                        <Frame Margin="0,20,0,0"
+                               BackgroundColor="AliceBlue">
+                <StackLayout>
+                <Frame>
+                    <StackLayout>
+                                    <Editor x:Name="mamita1txt" 
+                                                                                        HorizontalOptions="Center"
+                                            TextColor="Black"
+                                            Text="Mamita 2"
+                                            FontSize="20" />
+                                <Label TextColor="Black" x:Name="ContadorAutomaticoLabel2" Text="0" 
+                   HorizontalTextAlignment="Center" FontSize="30" />
+                                    <Label x:Name="contmamita1txt"
+                            TextColor="Black" Text="victorias: 0"
+                               HorizontalTextAlignment="Start" 
+                               FontSize="17"/>
+                                </StackLayout>
+                </Frame>
+                <StackLayout Orientation="Horizontal">
+                                <Button x:Name="botonR2"
+                        Text="Restar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked_5"/>
+                                <Button x:Name="botonS2"
+                                    Text="Sumar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked_4"/>
+
+
+                </StackLayout>
+                </StackLayout>
+                </Frame>
+
+
+
+
+                <Frame Margin="0,20,0,0"
+                       BackgroundColor="AliceBlue">
+                    <StackLayout>
+                        <Frame>
+                            <StackLayout>
+                                    <Editor x:Name="mamita2txt" 
+                                            HorizontalOptions="Center"
+                                            TextColor="Black"
+                                            Text="Mamita 3"
+                                            FontSize="20" />
+                                <Label TextColor="Black" x:Name="ContadorAutomaticoLabel3" Text="0" 
+                   HorizontalTextAlignment="Center" FontSize="30" />
+                                    <Label x:Name="contmamita2txt"
+                            TextColor="Black" Text="victorias: 0"
+                               HorizontalTextAlignment="Start" 
+                               FontSize="17"/>
+                                </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal">
+                                <Button x:Name="botonR3"
+                        Text="Restar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked_8"/>
+                                <Button x:Name="botonS3"
+                                    Text="Sumar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked_6"/>
+
+
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+
+
+
+
+
+
+                    <Frame Margin="0,20,0,0"
+                       BackgroundColor="AliceBlue">
+                    <StackLayout>
+                        <Frame>
+                            <StackLayout>
+                                    <Editor x:Name="mamita3txt" 
+                                            HorizontalOptions="Center"
+                                            TextColor="Black"
+                                            Text="Mamita 4"
+                                            FontSize="20" />
+
+                                <Label TextColor="Black" x:Name="ContadorAutomaticoLabel4" Text="0" 
+                   HorizontalTextAlignment="Center" FontSize="30" />
+                                    <Label x:Name="contmamita3txt"
+                            TextColor="Black" Text="victorias: 0"
+                               HorizontalTextAlignment="Start" 
+                               FontSize="17"/>
+                                </StackLayout>
+                        </Frame>
+                        <StackLayout Orientation="Horizontal">
+                                <Button x:Name="botonR4"
+                        Text="Restar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked_7"/>
+                                <Button x:Name="botonS4"
+                                    Text="Sumar" CornerRadius="50" 
+                        Margin="10,0,10,0" 
+                        Padding="40,0,40,0"
+                        Clicked="Button_Clicked_9"/>
+
+
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+                <Button x:Name="botonreinicio"
+                                        Text="Arrancar devuelta" CornerRadius="50" 
+                        Margin="10,30,10,20" 
+                        Padding="30,0,30,0"
+                        BackgroundColor="#415DC5"
+                        Clicked="botonreinicio_Clicked"/>
+            </StackLayout>
+
+
+
+        </ScrollView>
+    </Grid>
+
+
+  
+
+
+</ContentPage>
